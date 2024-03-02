@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/SetupFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.justride.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/SetupFragment"
+        android:name="com.example.justride.SetupFragment"
+        android:label="@string/setup_fragment_label"
+        tools:layout="@layout/fragment_setup">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/SessionFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.justride.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/SessionFragment"
+        android:name="com.example.justride.SessionFragment"
+        android:label="@string/session_fragment_label"
+        tools:layout="@layout/fragment_session">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/SetupFragment" />
     </fragment>
 </navigation>

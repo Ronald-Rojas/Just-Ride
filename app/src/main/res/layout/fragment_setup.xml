@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textview_start_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/start_session"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.325"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+        <ImageButton
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:contentDescription="@string/start_session"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.334"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_power_meter" />
+
+        <ImageButton
+            android:id="@+id/powerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="144dp"
+            android:contentDescription="@string/power_meter"
+            android:src="@android:drawable/ic_lock_idle_low_battery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_power_meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/power_meter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/powerButton" />
+
+        <ImageButton
+            android:id="@+id/cadence_button"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="160dp"
+            android:contentDescription="@string/cadence_sensor"
+            android:src="@android:drawable/radiobutton_off_background"
+            app:layout_constraintStart_toEndOf="@+id/powerButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_cadence_sensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cadence_sensor"
+            app:layout_constraintStart_toEndOf="@+id/textView_power_meter"
+            app:layout_constraintTop_toBottomOf="@+id/cadence_button" />
+
+        <ImageButton
+            android:id="@+id/heart_rate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="160dp"
+            android:src="@android:drawable/btn_star"
+            android:contentDescription="@string/heart_rate_button"
+            app:layout_constraintStart_toEndOf="@+id/cadence_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_heart_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/heart_rate_button"
+            app:layout_constraintStart_toEndOf="@+id/textview_cadence_sensor"
+            app:layout_constraintTop_toBottomOf="@+id/heart_rate_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
