@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
-            android:layout_marginTop="144dp"
+            android:layout_marginTop="164dp"
             android:contentDescription="@string/power_meter"
             android:src="@android:drawable/ic_lock_idle_low_battery"
             app:layout_constraintStart_toStartOf="parent"

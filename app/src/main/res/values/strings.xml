@@ -9,4 +9,10 @@
     <string name="power_meter">power meter</string>
     <string name="cadence_sensor">cadence sensor</string>
     <string name="heart_rate_button">heartrate_button</string>
+    <string name="session_title">Session</string>
+    <string name="current_power">%d\npower</string>
+    <string name="current_cadence">%d\ncadence</string>
+    <string name="current_heart_rate">%d\nHR</string>
+    <string name="total_time">time</string>
+    <string name="start">start</string>
 </resources>
