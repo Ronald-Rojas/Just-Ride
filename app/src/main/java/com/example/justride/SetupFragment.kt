@@ -41,4 +41,6 @@ class SetupFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }
