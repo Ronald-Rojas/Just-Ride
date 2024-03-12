@@ -2,6 +2,7 @@ package com.example.justride
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothDevice
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -19,6 +20,7 @@ import androidx.core.content.ContextCompat
 import com.example.justride.databinding.ActivityMainBinding
 
 const val REQUEST_ENABLE_BT = 0
+const val PERMISSION_CODE = 0
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -35,7 +37,19 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            if (ContextCompat.checkSelfPermission(baseContext,
+                    Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION),
+                    PERMISSION_CODE)
+            }
+        }
         val bluetoothAdapter = enableBluetooth()
+
         // TODO(ronaldrojas): Implement bluetooth device through connection and syncing data.
         // https://github.com/android/connectivity-samples/tree/master/BluetoothChat
         // https://developer.android.com/develop/connectivity/bluetooth/setup
